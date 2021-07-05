@@ -20,10 +20,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::get('/email',[MailController::class, "sendEmail"]);
-// Route::get('/index',[MailController::class, "index"]);
+Route::get('/email',[MailController::class, "sendEmail"]);
+Route::get('/index',[MailController::class, "index"]);
 
-Route::get('/email', function() {
-    Mail::to('derrickmbugua50@gmail.com')->send(new WelcomeMail());
-return new WelcomeMail();
-});
+// Route::get('/email', function() {
+//     Mail::to('derrickmbugua50@gmail.com')->send(new WelcomeMail());
+// return new WelcomeMail();
+// });
